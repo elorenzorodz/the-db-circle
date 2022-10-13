@@ -43,8 +43,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/proxy',
-    '@nuxtjs/firebase'
+    '@nuxtjs/proxy'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -64,23 +63,6 @@ export default {
       target: 'http://localhost:5001/the-db-circle/us-central1/getInputs', 
       // pathRewrite: {'^/getInputs': ''}, 
       changeOrigin: true 
-    }
-  },
-
-  firebase: {
-    config: {
-      apiKey: "AIzaSyAHgwCjRjBddCFRk5L_r_810vrhOTEAQHU",
-      authDomain: "the-db-circle.firebaseapp.com",
-      projectId: "the-db-circle",
-      storageBucket: "the-db-circle.appspot.com",
-      messagingSenderId: "706374818121",
-      appId: "1:706374818121:web:1fb0d3aeb50371290f6298"
-    },
-    services: {
-      firestore: true,
-      functions: true,
-      storage: true,
-      database: true
     }
   },
 
